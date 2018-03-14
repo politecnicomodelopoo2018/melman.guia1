@@ -21,8 +21,8 @@ class Alumno(object):
     def setAgregarNota(self,nota,materia):
         if nota < 1 and nota > 10:
             return False
-        for item in self.lista_materias
-            if materia == item
+        for item in self.lista_materias:
+            if materia == item:
                 item.agragarNota(nota)
                 return
 
