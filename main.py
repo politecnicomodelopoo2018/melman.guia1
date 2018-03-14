@@ -15,7 +15,3 @@ dia=int (input("ingrese dia de nacimiento: "))
 fecha_nac=datetime.date(año,mes,dia)
 v1.setFechaNac(fecha_nac)
 
-edad =datetime.date.today() - v1.fecha_naccimiento
-edad=edad.days/365.25
-edad=int(edad)
-print (edad)

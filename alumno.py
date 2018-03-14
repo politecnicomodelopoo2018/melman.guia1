@@ -1,10 +1,13 @@
+import datetime
+from materia import Materia
+
 class Alumno(object):
     nombre=None
     apellido=None
     fecha_naccimiento=None
 
     def __init__(self):
-        self.lista_notas = []
+        self.lista_materias = []
 
     def setnombre(self,nombre):
         self.nombre=nombre
@@ -15,16 +18,21 @@ class Alumno(object):
     def setFechaNac(self,fecha):
         self.fecha_naccimiento=fecha
 
-    def setAgregarNota(self,nota):
+    def setAgregarNota(self,nota,materia):
         if nota < 1 and nota > 10:
-            return false
-        self.lista_notas.append(nota)
+            return False
+        for item in self.lista_materias
+            if materia == item
+                item.agragarNota(nota)
+                return
 
-    def mayorNota(self):
-        return max(self.lista_notas)
+    def EdadAct(self):
+        edad = datetime.date.today() - self.fecha_naccimiento
+        edad = edad.days / 365.25
+        edad = int(edad)
+        return edad
 
-    def menorNota(self):
-        return min(self.lista_notas)
+    def AgragarMateria(self,materia):
+        mate=Materia(materia)
+        self.lista_materias.append(mate)
 
-    def PromedioNota(self):
-        return sum(self.lista_notas)/len(self.lista_notas)
