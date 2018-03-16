@@ -1,5 +1,3 @@
-from alumno import Alumno
-
 class Materia(object):
     nombre=None
 
@@ -7,13 +5,14 @@ class Materia(object):
         self.lista_notas = []
 
     def agregarNota(self,nota):
-        self.ListaNotas.append(nota)
+        self.lista_notas.append(nota)
+        return(self.lista_notas)
 
-    def mayorNota(self):
-        return max(self.lista_notas)
+    def mayorNotaMateria(self,lista_notas):
+        return max(lista_notas)
 
-    def menorNota(self):
-        return min(self.lista_notas)
+    def menorNotaMateria(self,lista_notas):
+        return min(lista_notas)
 
-    def PromedioNota(self):
-        return sum(self.lista_notas)/len(self.lista_notas)
+    def PromedioNotaMateria(self,lista_notas):
+        return sum(lista_notas)/len(lista_notas)
